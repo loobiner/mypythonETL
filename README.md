@@ -6,14 +6,20 @@ Once you have identified your datasets, perform ETL on the data. Make sure to pl
 
 * The type of transformation needed for this data (cleaning, joining, filtering, aggregating, etc).
 	- convert original .xls files to .csv files
-	- remove unneccessary columns
-	- remove unnecessary rows (non-state rows)
+	- remove unneccessary columns (there were a lot)
+	- remove unnecessary rows (non-state rows, duplicated state data
 	- rename columns to better reflect the data they contain
 	- add column to autism dataset that gives us the combined mean rather than broken down by binary gender
+	- join both tables to what is essentially a translation table of state name and abbreviation
+	- use state abbreviation as our key to join on
+	- only look at data for states that are present in both datasets
 
 * The type of final production database to load the data into (relational or non-relational).
 	- Relational Postgres database
 * The final tables or collections that will be used in the production database.
+	- mmr table
+	- autism table
+	- state name and abbreviation table (to translate and allow for joining)
 You will be required to submit a final technical report with the above information and steps required to reproduce your ETL process.
 
 ## Project Report
@@ -23,3 +29,8 @@ At the end of the week, your team will submit a Final Report that describes the 
 * **T**ransform: what data cleaning or transformation was required.
 * **L**oad: the final database, tables/collections, and why this was chosen.
 Please upload the report to Github and submit a link to Bootcampspot.
+
+## Caveats
+We know that comparing these datasets has some inherent issues. Namely, we are comparing rates without knowing the n (the hard numbers)
+for each rate.  
+
