@@ -22,8 +22,9 @@ Once you have identified your datasets, perform ETL on the data. Make sure to pl
 	- mmr table
 	- autism table
 	- state name and abbreviation table (to translate and allow for joining)
-	Note: We tried a few different versions of each dataframe (which you'll see in our Jupyter notebook) before settling on the
+	- Note: We tried a few different versions of each dataframe (which you'll see in our Jupyter notebook) before settling on the
 		final versions of each dataset.
+	- Additional Note: we fought with the autism table quite a bit, before deciding to make a new copy of it and start fresh.
 You will be required to submit a final technical report with the above information and steps required to reproduce your ETL process.
 
 ## Project Report
